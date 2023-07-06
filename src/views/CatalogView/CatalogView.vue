@@ -50,7 +50,7 @@
 
 }
 
-@media (max-width: 1079) {
+@media (max-width: 1079px) {
     .catalog_grid{
     grid-template-columns: 25% 25% 25% 25%;
          
