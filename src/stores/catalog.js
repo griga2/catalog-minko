@@ -6,47 +6,47 @@ export const useUserStore = defineStore('userStore', () => {
 
     const products = reactive([
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:300,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },{
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },{
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },{
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },{
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
       {
-        name:'Grey Hanters',
+        name:'Grey Hunters',
         price:200,
       },
     ]);
@@ -54,8 +54,8 @@ export const useUserStore = defineStore('userStore', () => {
     const current_product = ref('');
 
     const categories = reactive([
-      {name:"Space Wolwes"},
-      {name:"Blood Angel"}
+      {name:"Space Wolves"},
+      {name:"Blood Angels"}
     ]);
 
     return {
