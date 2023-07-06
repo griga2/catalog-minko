@@ -38,11 +38,15 @@ main * {
 
 .nav_bt{
     width: 250px;
-    height: 50px;
+    height: 100px;
     border: 0px;
     background-color: #87a75b;
     color: white;
     font-size: 26px;
+}
+
+.nav_bt:hover{
+    background-color: #708a4b;
 }
 
 header{
@@ -53,7 +57,6 @@ header{
     display: flex;
     flex: 4 1 1 1   ;
     justify-content: space-between;
-    padding-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
 
