@@ -7,7 +7,7 @@ export const useUserStore = defineStore('userStore', () => {
     const products = reactive([
       {
         name:'Grey Hanters',
-        price:200,
+        price:300,
       },
       {
         name:'Grey Hanters',
