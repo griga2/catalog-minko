@@ -47,7 +47,14 @@
     scrollbar-width: 0px;
     padding-left: 300px;
     padding-top: 20px;
-    
+
+}
+
+@media (max-width: 1079) {
+    .catalog_grid{
+    grid-template-columns: 25% 25% 25% 25%;
+         
+    }
 }
 .categori_button{
     width: 100%;
