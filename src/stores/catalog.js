@@ -49,6 +49,138 @@ export const useUserStore = defineStore('userStore', () => {
         name:'Grey Hunters',
         price:200,
       },
+      {
+        name:'Grey Hunters',
+        price:300,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:300,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:300,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },{
+        name:'Grey Hunters',
+        price:200,
+      },
+      {
+        name:'Grey Hunters',
+        price:200,
+      },
     ]);
     
     const current_product = ref('');

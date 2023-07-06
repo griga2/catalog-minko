@@ -35,10 +35,18 @@
 <style scoped>
 
 .catalog_grid{
-    margin-left: 220px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    width: calc(100% - 300px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    scrollbar-width: 0px;
+    padding-left: 300px;
+    padding-top: 20px;
     
 }
 .categori_button{
@@ -52,6 +60,9 @@
     background-color: #87A75B;
 }
 
+.catalog_grid::-webkit-scrollbar {
+  display: none;
+}
 #categories{
     color: white;
     font-size: 26px;
@@ -86,6 +97,8 @@
     margin: 0px;
     background-color: #36786E;
     border: 0px;
+    scrollbar-width: 0px;
+    padding: 0px;
 }
 
 #card{
