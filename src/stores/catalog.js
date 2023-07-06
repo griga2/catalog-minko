@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { reactive,} from 'vue';
+import { reactive, ref} from 'vue';
 
 // import ref from '@ref'
 export const useUserStore = defineStore('userStore', () => {
@@ -51,7 +51,7 @@ export const useUserStore = defineStore('userStore', () => {
       },
     ]);
     
-    current_product=ref('');
+    const current_product = ref('');
 
     const categories = reactive([
       {name:"Space Wolwes"},
@@ -60,6 +60,7 @@ export const useUserStore = defineStore('userStore', () => {
 
     return {
         products,
-        categories
+        categories,
+        current_product
     }
 })
