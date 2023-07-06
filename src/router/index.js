@@ -1,11 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CatalogView from '../views/CatalogView/CatalogView.vue'
-
+import MainView from '../views/MainView/MainView.vue'
 const routes = [
   {
-    path: '/',
+    path: '/catalog',
     name: 'catalog',
     component: CatalogView
+  },{
+    path:'/',
+    name:'startpage',
+    component:MainView
   }
 ]
 
