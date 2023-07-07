@@ -9,6 +9,7 @@ export const useUserStore = defineStore('userStore', () => {
         name:'Grey Hunters',
         price:200,
         id:"1",
+        main_image:'https://imagizer.imageshack.com/img924/8664/wqKLbi.png'
       },
       {
         name:'Grey Hunters',

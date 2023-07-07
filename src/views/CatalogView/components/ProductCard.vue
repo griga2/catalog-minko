@@ -18,15 +18,21 @@
 <template>
     <main :class="{current  :product.id == current_product}">
         <section id="fl">
-            <article id = 'image_box'>
-                image
+            <article >
+                <img :class="{current  :product.id == current_product}" id = 'image_box' :src="product.main_image" alt="">
             </article>
-            <article id="name_box">
+            <article :class="{current  :product.id == current_product}" id="name_box">
                 {{ product.name }}
-                <button id ='buy_button'>
+                <button id ='buy_button' :class="{current  :product.id == current_product}">
                     В карзину
                 </button>
+                <article v-if="product.id == current_product">
+                    <p>
+                        ОПИСАНИЕ ЫЫ
+                    </p>
+                </article>
             </article>
+            
         </section>
         <article id ='logo'>
             DG
@@ -56,6 +62,13 @@
     height: 127px;
 }
 
+#image_box.current{
+    transition: all 1s;
+
+    width: 648px;
+    height: 332px;
+    border-radius: 50px 50px 0px 0px;
+}
 
 #name_box{
     background: #87a75b;
@@ -70,6 +83,15 @@
     padding-top: 3px;
 }
 
+#name_box.current{
+    transition: all 1s;
+
+    width: 646px;
+    height: 178.488px;
+    border-radius: 0px 0px 50px 50px;
+    background: #B4C8AC;
+}
+
 #buy_button{
     background: #9b4e24;
   border-radius: 25px;
@@ -80,6 +102,10 @@
   border: 0px;
   position: relative;
   top: 50px;
+}
+
+#buy_button.current{
+  
 }
 
 main{
