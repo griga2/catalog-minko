@@ -8,6 +8,7 @@
     const {
         products,
         categories,
+        current_product
     } = storeToRefs(userStore);
 
 </script>
@@ -21,8 +22,11 @@
         </nav>
 
         <main class = 'catalog_grid'>
-            <section  v-for="product in products" :key="product.id">
-                <ProductCard class = 'card' :product = 'product'></ProductCard>
+            <section  v-for="product in products" :key="product.id" >
+                <ProductCard class = 'card' :product = 'product' @click="() => {
+                current_product = product.id;
+                console.log(current_product);
+                }"></ProductCard>
             </section>
         </main>
 

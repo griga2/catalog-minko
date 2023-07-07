@@ -1,6 +1,14 @@
 <script setup>
-import {defineProps} from 'vue'
-defineProps({
+    import {defineProps} from 'vue'
+    import { useUserStore } from '@/stores/catalog'
+    import { storeToRefs } from 'pinia'
+    const userStore = useUserStore();
+
+    const {
+        current_product
+    } = storeToRefs(userStore);
+
+    defineProps({
         product: {},
     })
 
@@ -8,8 +16,7 @@ defineProps({
 
 
 <template>
-    <main>
-       
+    <main :class="{current  :product.id == current_product}">
         <section id="fl">
             <article id = 'image_box'>
                 image
@@ -82,6 +89,20 @@ main{
     border-radius: 28px;
     margin: 10px;
 }
+
+main.current{
+    transition: all 1s;
+    width: 712px;
+    height: 596px;
+    flex-shrink: 0;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+    top: calc(50% - 298px);
+    left: calc(50% - 356px);
+}
+
 #fl{
     display: flex;
     flex-direction: column;
