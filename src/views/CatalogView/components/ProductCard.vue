@@ -1,12 +1,12 @@
 <script setup>
     import {defineProps} from 'vue'
-    import { useUserStore } from '@/stores/catalog'
+    import { useCatalogStore } from '@/stores/catalog'
     import { storeToRefs } from 'pinia'
-    const userStore = useUserStore();
+    const catalogStore = useCatalogStore();
 
     const {
         current_product
-    } = storeToRefs(userStore);
+    } = storeToRefs(catalogStore);
 
     defineProps({
         product: {},
@@ -37,6 +37,13 @@
         <article id ='logo'>
             DG
         </article>
+        <button @click = "(event) => {
+            console.log(current_product + ' ' + product.id);
+            current_product = null;
+        }"
+        v-if = "product.id == current_product" id = 'out_button'>
+            X
+        </button>
     </main>
 </template>
 
@@ -47,6 +54,18 @@
     position: relative;
     top: -335px;
     left: -15px;
+    border-radius: 400px;
+    width: 63px;
+    height: 63px;
+    text-align: center;
+}
+
+#out_button{
+    background-color: red;
+    color: white;
+    position: relative;
+    top: -650px;
+    left: 655px;
     border-radius: 400px;
     width: 63px;
     height: 63px;

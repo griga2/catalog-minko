@@ -1,15 +1,15 @@
 <script setup>
 
-    import { useUserStore } from '@/stores/catalog'
+    import { useCatalogStore } from '@/stores/catalog'
     import { storeToRefs } from 'pinia'
     import ProductCard from './components/ProductCard.vue'
-    const userStore = useUserStore();
+    const catalogStore = useCatalogStore();
 
     const {
         products,
         categories,
         current_product
-    } = storeToRefs(userStore);
+    } = storeToRefs(catalogStore);
 
 </script>
 
@@ -24,7 +24,9 @@
         <main class = 'catalog_grid'>
             <section  v-for="product in products" :key="product.id" >
                 <ProductCard class = 'card' :product = 'product' @click="() => {
-                current_product = product.id;
+                if (current_product!=product.id) {
+                    current_product = product.id;
+                }
                 console.log(current_product);
                 }"></ProductCard>
             </section>
