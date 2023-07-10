@@ -5,7 +5,8 @@
     const catalogStore = useCatalogStore();
 
     const {
-        current_product
+        current_product,
+        close_card,
     } = storeToRefs(catalogStore);
 
     defineProps({
@@ -40,6 +41,7 @@
         <button @click = "(event) => {
             console.log(current_product + ' ' + product.id);
             current_product = null;
+            close_card = true;
         }"
         v-if = "product.id == current_product" id = 'out_button'>
             X

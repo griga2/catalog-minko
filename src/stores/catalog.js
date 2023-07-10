@@ -113,9 +113,12 @@ id:"19",
       {name:"Blood Angels"},
     ]);
 
+    const close_card = ref(false);
+
     return {
         products,
         categories,
         current_product,
+        close_card,
     }
 })

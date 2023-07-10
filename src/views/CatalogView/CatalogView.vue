@@ -8,7 +8,8 @@
     const {
         products,
         categories,
-        current_product
+        current_product,
+        close_card,
     } = storeToRefs(catalogStore);
 
 </script>
@@ -24,7 +25,9 @@
         <main class = 'catalog_grid'>
             <section  v-for="product in products" :key="product.id" >
                 <ProductCard class = 'card' :product = 'product' @click="() => {
-                if (current_product!=product.id) {
+                if (close_card){
+                    close_card=false;
+                } else {
                     current_product = product.id;
                 }
                 console.log(current_product);
@@ -56,11 +59,11 @@
 
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 1600px) {
     .catalog_grid{
     grid-template-columns: 25% 25% 25% 25%;
          
-    }
+    }   
 }
 .categori_button{
     width: 100%;
