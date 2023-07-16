@@ -42,7 +42,18 @@
 </template>
 
 <style scoped>
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #36786E;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
 
+main * {
+    box-sizing: border-box;
+}
 .catalog_grid{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;

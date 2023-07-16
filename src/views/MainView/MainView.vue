@@ -6,7 +6,7 @@
 <template>
     <header>
         <a>AbsentTeam</a>
-        <section>
+        <nav>
             <button class = 'nav_bt' @click="$router.push('/catalog')">
                 Каталог
             </button>
@@ -16,20 +16,26 @@
             <button class = 'nav_bt'>
                 Личный кабинет
             </button>
-        </section>
+        </nav>
     </header>
+
     <main>
-        
+        <a>a</a>
     </main>
+    <footer>
+
+    </footer>
 </template>
 
-<style>
+<style scoped>
 
-main{
+main {
     height: 100%;
     width: 100%;
     background-color: #36786E;
-    
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
 }
 
 main * {
@@ -62,4 +68,12 @@ header{
 
 }
 
+body{
+    height: max-content;
+}
+
+footer{
+    height: 300px;
+    background-color: #36786E   ;
+}
 </style>

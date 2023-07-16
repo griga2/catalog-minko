@@ -17,7 +17,7 @@
 
 
 <template>
-    <main :class="{current  :product.id == current_product}">
+    <main class = 'card' :class="{current  :product.id == current_product}">
         <section id="fl">
             <article >
                 <img :class="{current  :product.id == current_product}" id = 'image_box' :src="product.main_image" alt="">
@@ -129,15 +129,15 @@
   
 }
 
-main{
+main.card{
     background-color: #0C3A2F;
     width: 244px;
-    height: 304px;
+    height: 324px;
     border-radius: 28px;
     margin: 10px;
 }
 
-main.current{
+main.card.current{
     transition: all 1s;
     width: 712px;
     height: 596px;
