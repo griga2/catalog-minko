@@ -72,6 +72,7 @@
     width: 63px;
     height: 63px;
     text-align: center;
+    transition: 0s;
 }
 
 #image_box{
@@ -110,7 +111,7 @@
     width: 646px;
     height: 178.488px;
     border-radius: 0px 0px 50px 50px;
-    background: #B4C8AC;
+    background: #87a75b;
 }
 
 #buy_button{
@@ -139,6 +140,7 @@ main.card{
 
 main.card.current{
     transition: all 1s;
+    transform-origin: 50% 50% 50%;
     width: 712px;
     height: 596px;
     flex-shrink: 0;
