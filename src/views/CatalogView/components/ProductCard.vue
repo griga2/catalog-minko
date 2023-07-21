@@ -26,7 +26,7 @@
                 <button id ='buy_button' :class="{current  :product.id == current_product}">
                     В карзину
                 </button>
-                <article v-if="product.id == current_product">
+                <article v-if="product.id == current_product" id = 'promt'>
                     <p>
                         ОПИСАНИЕ ЫЫ
                     </p>
@@ -62,6 +62,13 @@
     height: 127px;
 }
 
+#promt{
+    overflow-y:scroll;
+    scrollbar-width: 0px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
 #image_box.current{
     transition: all 1s;
 
@@ -85,7 +92,7 @@
 
 #name_box.current{
     transition: all 1s;
-
+    font-size: 36px;
     width: 646px;
     height: 178.488px;
     border-radius: 0px 0px 50px 50px;
@@ -105,7 +112,14 @@
 }
 
 #buy_button.current{
-  
+  position: relative;
+  top: 160px;
+  background: #9b4e24;
+  border-radius: 25px;
+  width: 137px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main{
