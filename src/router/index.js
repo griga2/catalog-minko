@@ -10,7 +10,11 @@ const routes = [
     path:'/',
     name:'startpage',
     component:MainView
-  }
+  },
+  // {
+  //   paht:'/person',
+  //   name:'person',
+  // }
 ]
 
 const router = createRouter({

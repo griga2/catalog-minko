@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { reactive, ref} from 'vue';
 
 // import ref from '@ref'
-export const useUserStore = defineStore('userStore', () => {
+export const useCatalogStore = defineStore('userStore', () => {
 
     const products = reactive([
       {
@@ -65,6 +65,7 @@ id:"13",
       {
         name:'Grey Hunters',
         price:300,
+        id:'25'
       },
       {
         name:'Grey Hunters',
@@ -105,16 +106,19 @@ id:"19",
       }
     ]);
     
-    const current_product = ref('2');
+    const current_product = ref(null);
 
     const categories = reactive([
       {name:"Space Wolves"},
-      {name:"Blood Angels"}
+      {name:"Blood Angels"},
     ]);
+
+    const close_card = ref(false);
 
     return {
         products,
         categories,
-        current_product
+        current_product,
+        close_card,
     }
 })

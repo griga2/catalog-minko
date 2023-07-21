@@ -1,12 +1,13 @@
 <script setup>
     import {defineProps} from 'vue'
-    import { useUserStore } from '@/stores/catalog'
+    import { useCatalogStore } from '@/stores/catalog'
     import { storeToRefs } from 'pinia'
-    const userStore = useUserStore();
+    const catalogStore = useCatalogStore();
 
     const {
-        current_product
-    } = storeToRefs(userStore);
+        current_product,
+        close_card,
+    } = storeToRefs(catalogStore);
 
     defineProps({
         product: {},
@@ -16,7 +17,7 @@
 
 
 <template>
-    <main :class="{current  :product.id == current_product}">
+    <main class = 'card' :class="{current  :product.id == current_product}">
         <section id="fl">
             <article >
                 <img :class="{current  :product.id == current_product}" id = 'image_box' :src="product.main_image" alt="">
@@ -37,6 +38,14 @@
         <article id ='logo'>
             DG
         </article>
+        <button @click = "(event) => {
+            console.log(current_product + ' ' + product.id);
+            current_product = null;
+            close_card = true;
+        }"
+        v-if = "product.id == current_product" id = 'out_button'>
+            X
+        </button>
     </main>
 </template>
 
@@ -51,6 +60,19 @@
     width: 63px;
     height: 63px;
     text-align: center;
+}
+
+#out_button{
+    background-color: red;
+    color: white;
+    position: relative;
+    top: -650px;
+    left: 655px;
+    border-radius: 400px;
+    width: 63px;
+    height: 63px;
+    text-align: center;
+    transition: 0s;
 }
 
 #image_box{
@@ -96,7 +118,7 @@
     width: 646px;
     height: 178.488px;
     border-radius: 0px 0px 50px 50px;
-    background: #B4C8AC;
+    background: #87a75b;
 }
 
 #buy_button{
@@ -122,16 +144,17 @@
   margin-right: auto;
 }
 
-main{
+main.card{
     background-color: #0C3A2F;
     width: 244px;
-    height: 304px;
+    height: 324px;
     border-radius: 28px;
     margin: 10px;
 }
 
-main.current{
+main.card.current{
     transition: all 1s;
+    transform-origin: 50% 50% 50%;
     width: 712px;
     height: 596px;
     flex-shrink: 0;

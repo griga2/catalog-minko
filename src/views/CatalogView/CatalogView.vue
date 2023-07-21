@@ -1,15 +1,16 @@
 <script setup>
 
-    import { useUserStore } from '@/stores/catalog'
+    import { useCatalogStore } from '@/stores/catalog'
     import { storeToRefs } from 'pinia'
     import ProductCard from './components/ProductCard.vue'
-    const userStore = useUserStore();
+    const catalogStore = useCatalogStore();
 
     const {
         products,
         categories,
-        current_product
-    } = storeToRefs(userStore);
+        current_product,
+        close_card,
+    } = storeToRefs(catalogStore);
 
 </script>
 
@@ -24,7 +25,11 @@
         <main class = 'catalog_grid'>
             <section  v-for="product in products" :key="product.id" >
                 <ProductCard class = 'card' :product = 'product' @click="() => {
-                current_product = product.id;
+                if (close_card){
+                    close_card=false;
+                } else {
+                    current_product = product.id;
+                }
                 console.log(current_product);
                 }"></ProductCard>
             </section>
@@ -37,7 +42,18 @@
 </template>
 
 <style scoped>
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #36786E;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
 
+main * {
+    box-sizing: border-box;
+}
 .catalog_grid{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -54,11 +70,11 @@
 
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 1600px) {
     .catalog_grid{
     grid-template-columns: 25% 25% 25% 25%;
          
-    }
+    }   
 }
 .categori_button{
     width: 100%;
