@@ -2,25 +2,73 @@
 
     import { useCatalogStore } from '@/stores/catalog'
     import { storeToRefs } from 'pinia'
+    import {ref} from 'vue'
     import ProductCard from './components/ProductCard.vue'
     const catalogStore = useCatalogStore();
 
     const {
         products,
-        categories,
+        // categories,
         current_product,
         close_card,
     } = storeToRefs(catalogStore);
 
+
+    const catalog_menu_open = ref(false);
+    const basket_open = ref(false);
+    const personal_area_open = ref(false);
 </script>
 
 
 <template >
-        <nav>
-            <section id="categories" v-for="categori in categories" :key="categori.id">
-                <button class ='categori_button'>{{ categori.name }}</button> 
+
+
+
+        <section class = 'catalog_menu'  v-if='catalog_menu_open'>
+
+        </section>
+
+        <section class = 'basket'  v-if='basket_open'>
+
+        </section>
+
+        <section class = 'personal_area'  v-if='personal_area_open'>
+
+        </section>
+
+        <section class = 'menu'>
+            <section>
+                <button class = 'menu_button'
+                @click = " () => {
+                    if (!catalog_menu_open) { catalog_menu_open =  true 
+                    } else {
+                        catalog_menu_open =  false
+                    }
+                }">Каталог</button>
             </section>
-        </nav>
+            <!-- поиск -->
+            <section>
+                <button class = 'menu_button'
+                @click = " () => {
+                    if (!basket_open) { basket_open =  true 
+                    } else {
+                        basket_open =  false
+                    }
+                }">Корзина</button>
+            </section>
+            <section>
+                <button class = 'menu_button'
+                @click = " () => {
+                    if (!personal_area_open) { cpersonal_area_open =  true 
+                    } else {
+                        personal_area_open =  false
+                    }
+                }">Личный кабинет</button>
+            </section>
+        </section>
+
+        <section class = 'menu_window'  v-if='menu_window'>
+        </section>
 
         <main class = 'catalog_grid'>
             <section  v-for="product in products" :key="product.id" >
@@ -49,6 +97,53 @@ main {
     margin: 0px;
     border: 0px;
     padding: 0px;
+}
+
+.menu {
+    height: 25%;
+    width: 100%;
+    background-color: #9ECD5D;
+    margin: 0px;
+    padding: 0px;
+    position: static;
+    z-index: 7;
+}
+
+.basket {
+    height: 70%;
+    width: 70%;
+    background-color: #9ECD5D;
+    padding: 0px;
+    position: absolute;
+    border-radius: 25px;
+    z-index: 3;
+    top: 15%;
+    left: 15%;
+}
+
+.personal_area {
+    height: 70%;
+    width: 70%;
+    background-color: #9ECD5D;
+    padding: 0px;
+    position: absolute;
+    border-radius: 25px;
+    z-index: 7;
+    top: 15%;
+    left: 15%;
+}
+
+.catalog_menu {
+    height: 70%;
+    width: 70%;
+    background-color: #9ECD5D;
+    padding: 0px;
+    position: absolute;
+    border-radius: 25px;
+    z-index: 3;
+    top: 15%;
+    left: 15%;
+
 }
 
 main * {

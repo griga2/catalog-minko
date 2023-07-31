@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CatalogView from '../views/CatalogView/CatalogView.vue'
 import MainView from '../views/MainView/MainView.vue'
+// impoer BasketView
 const routes = [
   {
     path: '/catalog',
@@ -11,6 +12,11 @@ const routes = [
     name:'startpage',
     component:MainView
   },
+  // {
+  //   path:'/basket',
+  //   name:'basketView',
+  //   component:BasketView;
+  // }
   // {
   //   paht:'/person',
   //   name:'person',
