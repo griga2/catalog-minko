@@ -93,7 +93,7 @@
 main {
     height: 100%;
     width: 100%;
-    background-color: #36786E;
+    background-color: #ffffff;
     margin: 0px;
     border: 0px;
     padding: 0px;
@@ -102,7 +102,7 @@ main {
 .menu {
     height: 25%;
     width: 100%;
-    background-color: #9ECD5D;
+    background-color: #5A884D;
     margin: 0px;
     padding: 0px;
     position: static;
@@ -112,7 +112,7 @@ main {
 .basket {
     height: 70%;
     width: 70%;
-    background-color: #9ECD5D;
+    background-color: #5A884D;
     padding: 0px;
     position: absolute;
     border-radius: 25px;
@@ -124,7 +124,7 @@ main {
 .personal_area {
     height: 70%;
     width: 70%;
-    background-color: #9ECD5D;
+    background-color: #5A884D;
     padding: 0px;
     position: absolute;
     border-radius: 25px;
@@ -136,7 +136,7 @@ main {
 .catalog_menu {
     height: 70%;
     width: 70%;
-    background-color: #9ECD5D;
+    background-color: #5A884D;
     padding: 0px;
     position: absolute;
     border-radius: 25px;
@@ -179,7 +179,7 @@ main * {
     padding: 0px;
     font-size: 26px;
     color: white;
-    background-color: #87A75B;
+    background-color: #5A884D;
 }
 
 .catalog_grid::-webkit-scrollbar {
@@ -189,7 +189,7 @@ main * {
     color: white;
     font-size: 26px;
     border: 0px;
-    background-color: #87A75B;
+    background-color: #5A884D;
     width: 100%;
     height: 60px;
 }
@@ -201,7 +201,7 @@ main * {
 
 .categori_button:focus{
     padding-left: 25px;
-    border-left: 3px solid #87A75B;
+    border-left: 3px solid #5A884D;
     background-color: #36786E;
 
 }
@@ -234,7 +234,7 @@ nav{
     left: 0px;
     width: 200px;
     height: 100%;
-    background-color: #87A75B;
+    background-color: #5A884D;
     color-scheme: #FFFFFF;
 }
 </style>

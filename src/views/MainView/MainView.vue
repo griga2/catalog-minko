@@ -10,7 +10,7 @@
                 Absent team
             </a>
             <p id = 'small_start_text'>
-                Мир кузня - не скованный законами адептус механикус (и гв)
+                Мир - кузня, не скованный законами адептус механикус (и гв)
             </p>
         </section>
         <section id="big_logo">
@@ -24,7 +24,7 @@
                 Каталог
             </button>
             <button class = 'nav_bt'>
-                Карзина
+                Корзина
             </button>
             <button class = 'nav_bt'>
                 Личный кабинет
@@ -82,7 +82,7 @@ template{
 }
 
 #start_block{
-    background-color: #36786E;
+    background-color: #5A884D;
     height: 50vh;
     width: 100%;
     display: flex; 
@@ -103,7 +103,7 @@ template{
     width: 250px;
     height: 100px;
     border: 0px;
-    background-color: #87a75b;
+    background-color: #5A884D;
     color: white;
     font-size: 26px;
 }
@@ -116,7 +116,7 @@ header{
     position: static;
     height: 100px;
     width: calc(100%-40px);
-    background: #87a75b;    
+    background: #5A884D;    
     display: flex;
     flex: 4 1 1 1   ;
     justify-content: space-between;

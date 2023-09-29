@@ -52,7 +52,7 @@
 <style scoped>
 
 #logo{
-    background-color: #87A75B;
+    background-color: #5A884D;
     position: relative;
     top: -335px;
     left: -15px;
@@ -78,7 +78,7 @@
 #image_box{
     border-radius: 26px 26px 5px 5px;
     border-style: solid;
-    border-color: #87a75b;
+    border-color: 5A884D;
     border-width: 3px;
     width: 198px;
     height: 127px;
@@ -100,7 +100,7 @@
 }
 
 #name_box{
-    background: #87a75b;
+    background: #5A884D;
     border-radius: 5px 5px 25px 25px;
     width: 198px;
     height: 125px;
@@ -118,7 +118,7 @@
     width: 646px;
     height: 178.488px;
     border-radius: 0px 0px 50px 50px;
-    background: #87a75b;
+    background: #5A884D;
 }
 
 #buy_button{
